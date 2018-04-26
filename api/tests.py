@@ -81,7 +81,7 @@ class RestaurantAPITest(TestCase):
         self.assertEqual(
             {
                 'id':self.restaurant_1.id,
-                'owner':self.restaurant_1.owner,
+                'owner':self.restaurant_1.owner.id,
                 'name':self.restaurant_1.name,
                 'description':self.restaurant_1.description,
                 'opening_time': self.restaurant_1.opening_time,
@@ -93,7 +93,7 @@ class RestaurantAPITest(TestCase):
 
     def test_restaurant_update_view(self):
         update_url = reverse("api-update", kwargs = {"restaurant_id": self.restaurant_1.id})
-        request = self.factory.put(update_url, data=self.data)
+        request = self.factory.put(update_url, data=self.restaurant_data)
         response = RestaurantUpdateView.as_view()(request, restaurant_id=self.restaurant_1.id)
         self.assertEqual(response.status_code, 200)
 

@@ -5,30 +5,30 @@ class RestaurantListSerializer(serializers.ModelSerializer):
     class Meta:
         model = Restaurant
         fields = [
-        	'name',
-        	'opening_time',
-        	'closing_time',
-        	]
+            'name',
+            'opening_time',
+            'closing_time',
+            ]
 
 
 class RestaurantDetailSerializer(serializers.ModelSerializer):
     class Meta:
         model = Restaurant
         fields = [
-        	'id',
-        	'owner',
-        	'name',
-        	'description',
-        	'opening_time',
-        	'closing_time',
-        	]
+            'id',
+            'owner',
+            'name',
+            'description',
+            'opening_time',
+            'closing_time',
+            ]
 
 class RestaurantCreateUpdateSerializer(serializers.ModelSerializer):
-	class Meta:
+    class Meta:
         model = Restaurant
         fields = [
-        	'name',
-        	'description',
-        	'opening_time',
-        	'closing_time',
-        	]
+            'name',
+            'description',
+            'opening_time',
+            'closing_time',
+            ]
