@@ -7,7 +7,6 @@ from rest_framework.generics import (
 )
 from .serializers import (
     RestaurantListSerializer,
-    RestaurantListSerializer,
     RestaurantDetailSerializer,
     RestaurantCreateUpdateSerializer,
 )
